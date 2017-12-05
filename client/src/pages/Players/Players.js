@@ -35,7 +35,7 @@ class Players extends Component {
         API.getPlayers(this.props.match.params.id)
             .then(res => {
                 console.log(res.data);
-                this.setState({players: res.data.player, lName: "", fName: "", jersey: ""})
+                this.setState({players: res.data.player, fName: "", lName: "", jersey: ""})
             })
             .catch(err => console.log(err));
     };
@@ -95,12 +95,13 @@ class Players extends Component {
                                             <PlayersInfo key={player._id}>
                                                 <Col s={4}>
                                                 <Card
-                                                    header={<CardTitle ></CardTitle>} actions={[ <DeleteBtn onClick={() => this.deletePlayer(player._id)} />]}>
+                                                    // header={<CardTitle></CardTitle>}
+                                                    actions={[ <DeleteBtn key={player._id} onClick={() => this.deletePlayer(player._id)} />]}>
                                                     <a className="player-card" href={"/players/" + player._id}>
                                                         <div className="center-align">
                                                             <h4>
-                                                                {player.lName +" "}
-                                                                {player.fName}
+                                                                {player.fName +" "}
+                                                                {player.lName}
                                                             </h4>
                                                             <h5>
                                                                 {player.jersey}
@@ -137,14 +138,14 @@ class Players extends Component {
                             <InputForm name="fName" id="fName" type="text" className="validate"
                                        value={this.state.fName}
                                        onChange={this.handleInputChange}/>
-                            <label className="active" for="fName">First Name </label>
+                            <label className="active" htmlFor="fName">First Name </label>
                         </div>
 
                         <div className="input-field col s6">
                             <InputForm name="lName" id="lName" type="text" className="validate"
                                        value={this.state.lName}
                                        onChange={this.handleInputChange}/>
-                            <label className="active" for="lName"> Last Name </label>
+                            <label className="active" htmlFor="lName"> Last Name </label>
                         </div>
 
                     </div>
@@ -158,7 +159,7 @@ class Players extends Component {
                                        type="text"
                                        className="validate"
                             />
-                            <label className="active" for="jersey">Jersey</label>
+                            <label className="active" htmlFor="jersey">Jersey</label>
                         </div>
 
                         <div className="input-field col s6">
@@ -168,7 +169,7 @@ class Players extends Component {
                                        id="position"
                                        className="validate"
                             />
-                            <label className="active" for="position">Position</label>
+                            <label className="active" htmlFor="position">Position</label>
                         </div>
 
 
@@ -191,14 +192,14 @@ class Players extends Component {
                             {/*<InputForm name="points" id="points" type="text" className="validate"*/}
                                        {/*value={this.state.points}*/}
                                        {/*onChange={this.handleInputChange}/>*/}
-                            {/*<label className="active" for="fName">Points</label>*/}
+                            {/*<label className="active" htmlFor="fName">Points</label>*/}
                         {/*</div>*/}
 
                         {/*<div className="input-field col s6">*/}
                             {/*<InputForm name="assists" id="type" type="text" className="validate"*/}
                                        {/*value={this.state.assists}*/}
                                        {/*onChange={this.handleInputChange}/>*/}
-                            {/*<label className="active" for="type">Assists</label>*/}
+                            {/*<label className="active" htmlFor="type">Assists</label>*/}
                         {/*</div>*/}
 
                     {/*</div>*/}
@@ -208,14 +209,14 @@ class Players extends Component {
                             {/*<InputForm name="rebounds" id="fName" type="text" className="validate"*/}
                                        {/*value={this.state.rebounds}*/}
                                        {/*onChange={this.handleInputChange}/>*/}
-                            {/*<label className="active" for="fName">Rebounds</label>*/}
+                            {/*<label className="active" htmlFor="fName">Rebounds</label>*/}
                         {/*</div>*/}
 
                         {/*<div className="input-field col s6">*/}
                             {/*<InputForm name="steals" id="type" type="text" className="validate"*/}
                                        {/*value={this.state.steals}*/}
                                        {/*onChange={this.handleInputChange}/>*/}
-                            {/*<label className="active" for="type">Steals</label>*/}
+                            {/*<label className="active" htmlFor="type">Steals</label>*/}
                         {/*</div>*/}
 
                     {/*</div>*/}
@@ -225,7 +226,7 @@ class Players extends Component {
                             {/*<InputForm name="turnovers" id="turnovers" type="text" className="validate"*/}
                                        {/*value={this.state.turnovers}*/}
                                        {/*onChange={this.handleInputChange}/>*/}
-                            {/*<label className="active" for="fName">Turnovers</label>*/}
+                            {/*<label className="active" htmlFor="fName">Turnovers</label>*/}
                         {/*</div>*/}
                     {/*</div>*/}
 

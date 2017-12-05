@@ -104,14 +104,14 @@ class Main extends Component {
                                             <InputForm
                                                 label="email"
                                                 type="email"
-                                                s={12}
-                                                validate
+                                                // s={12}
+                                                // validate
                                                 data-error="Please enter a valid email address"
                                                 data-success="Valid Email"
                                                 value={this.state.email}
                                                 onChange={this.handleInputChange}
                                             />
-                                            <label className="active" for="fName">Email</label>
+                                            <label className="active" htmlFor="fName">Email</label>
                                         </Row>
                                     </div>
 
@@ -119,8 +119,8 @@ class Main extends Component {
                                         <InputForm
                                             label="password"
                                             type="password"
-                                            s={12}
-                                            validate
+                                            // s={12}
+                                            // validate
                                             data-error="Please enter a valid email address"
                                             data-success="Valid Email"
                                             value={this.state.password}
@@ -153,7 +153,7 @@ class Main extends Component {
                                {/*className="validate"*/}
                                {/*value={this.state.name}*/}
                                {/*onChange={this.handleChange.bind(this)}/>*/}
-                    {/*<label className="active" for="name">Name</label>*/}
+                    {/*<label className="active" htmlFor="name">Name</label>*/}
                 {/*</div>*/}
 
                 {/*<div className="input-field col s6">*/}
@@ -162,7 +162,7 @@ class Main extends Component {
                                {/*className="validate"*/}
                                {/*value={this.state.email}*/}
                                {/*onChange={this.handleChange.bind(this)}/>*/}
-                    {/*<label className="active" for="email">Email</label>*/}
+                    {/*<label className="active" htmlFor="email">Email</label>*/}
                 {/*</div>*/}
 
             {/*</div>*/}
@@ -177,7 +177,7 @@ class Main extends Component {
                                {/*className="validate"*/}
 
                     {/*/>*/}
-                    {/*<label className="active" for="type">Password</label>*/}
+                    {/*<label className="active" htmlFor="type">Password</label>*/}
                 {/*</div>*/}
 
                 {/*<div className="input-field col s6">*/}
@@ -187,7 +187,7 @@ class Main extends Component {
                                {/*id="type"*/}
                                {/*className="validate"*/}
                     {/*/>*/}
-                    {/*<label className="active" for="type">Confirm Password</label>*/}
+                    {/*<label className="active" htmlFor="type">Confirm Password</label>*/}
                 {/*</div>*/}
 
             {/*</div>*/}
@@ -205,4 +205,3 @@ class Main extends Component {
     }
 }
 export default Main;
-

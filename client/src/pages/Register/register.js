@@ -99,7 +99,7 @@ class register extends Component {
                                     data-success="Valid Email"
 
                                 />
-                                <label className="active" for="fName">Email</label>
+                                <label className="active" htmlFor="fName">Email</label>
                             </Row>
                         </div>
 
@@ -112,7 +112,7 @@ class register extends Component {
                                     value={this.state.password}
                                     onChange={this.handleInputChange}
                                 />
-                                <label className="active" for="fName">Password</label>
+                                <label className="active" htmlFor="fName">Password</label>
                             </Row>
                         </div>
 
@@ -126,7 +126,7 @@ class register extends Component {
                                     value={this.state.name}
                                     onChange={this.handleInputChange}
                                 />
-                                <label className="active" for="fName">Name</label>
+                                <label className="active" htmlFor="fName">Name</label>
                             </Row>
                         </div>
                         <FormBtn
@@ -152,7 +152,7 @@ class register extends Component {
                                     data-success="Valid Email"
 
                                 />
-                                <label className="active" for="fName">Email</label>
+                                <label className="active" htmlFor="fName">Email</label>
                             </Row>
                         </div>
 
@@ -165,7 +165,7 @@ class register extends Component {
                                     value={this.state.password}
                                     onChange={this.handleInputChange}
                                 />
-                                <label className="active" for="fName">Password</label>
+                                <label className="active" htmlFor="fName">Password</label>
                             </Row>
                         </div>
 

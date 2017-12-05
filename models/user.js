@@ -11,7 +11,12 @@ const userSchema = new Schema({
 		unique: true,
 		lowercase: true,
 		trim: true,
-		validate: [validator.isEmail, 'Invalid Email Address'],
+		validate: {
+      validator: (value) => {
+        return validator.isEmail(value);
+      },
+      message: '{VALUE} is not a valid email'
+    },
 		required: 'Please provide an email address'
 	},
 	name: {

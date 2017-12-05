@@ -12,7 +12,7 @@ import "./style.css";
 class Teams extends Component {
 	state = {
 		teams: [],
-		teamName: ""
+		teamName: "",
 	};
 
 	componentDidMount(){
@@ -59,21 +59,21 @@ class Teams extends Component {
 				<div>
 					<NavBar />
 					<PageHeader />
-					
 
-					<Row>	
+
+					<Row>
 						<AddTeam />
 						{this.state.teams.length ? (
 							<div>
-								{this.state.teams.map(team => (
-									
-										<TeamCard>
-											<Link to={`/teams/${team._id}`}>{team.teamName}</Link>
+								{this.state.teams.map((team, i) => (
+
+										<TeamCard key={i} team={team.teamName}>
+											<Link to={`teams/${team._id}`}>{team.teamName}</Link>
 											<Row>
 												<Button className="red accent-4" onClick={() => this.deleteTeam(team._id)}>Delete</Button>
 											</Row>
 										</TeamCard>
-									
+
 								))}
 						</div>) : (<div/>)}
 					</Row>
@@ -86,7 +86,7 @@ class Teams extends Component {
 				      </div>
 
 				      <div className="modal-content">
-				        <Input 
+				        <Input
 				          value={this.state.teamName}
 				          onChange={this.handleInputChange}
 				          name="teamName"
@@ -97,7 +97,7 @@ class Teams extends Component {
 				        <a onClick={this.handleFormSubmit} id="add-team-button" href="#!" className="modal-action modal-close waves-effect waves-green btn-flat">Add Team</a>
 				        <a id="cancel-team-button" href="#!" className="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
 				      </div>
-			    
+
 			 		 </div>
 
 				</div>

@@ -60,7 +60,8 @@ class Detail extends Component {
                     <Col s={1} m={3}/>
                     <Col s={10} m={6}>
                         <div
-                            header={<CardTitle image={this.state.player.playerImage}></CardTitle>}>
+                            // header={<CardTitle image={this.state.player.playerImage}></CardTitle>}
+                            >
                             <CardPanel>
                                 <h3 className="center red-text text-accent-4">
                                     {this.state.player.jersey}
