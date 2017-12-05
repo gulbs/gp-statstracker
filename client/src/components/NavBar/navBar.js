@@ -9,7 +9,7 @@ const NavBar = props =>(
                 <ul className="right">
                     {/*<li><a href="#modal1" className="red-text text-accent-4 modal-trigger">LOG IN/OUT</a></li>*/}
                     <li><a href="/teams" className="red-text text-accent-4">TEAMS</a></li>
-                    <li><a href="/register" className="red-text text-accent-4">REGISTER</a></li>
+                    <li><a href="/register" className="red-text text-accent-4">LOGIN/REGISTER</a></li>
 
                 </ul>
             </div>
